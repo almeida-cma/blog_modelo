@@ -1,2 +1,2 @@
 # blog_modelo
-Modelo de blog para conteúdo
+Modelo de blog para conteúdo para atividade
