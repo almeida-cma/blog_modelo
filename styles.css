@@ -1,0 +1,82 @@
+/* Estilos gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Estilos específicos do cabeçalho */
+.blog-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.blog-header img {
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+.search-box {
+    margin-top: 20px;
+}
+
+.search-box input {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos do conteúdo principal */
+.posts {
+    width: 70%;
+    float: left;
+    padding: 20px;
+}
+
+.posts article {
+    margin-bottom: 20px;
+}
+
+.posts article img {
+    max-width: 100%;
+    height: auto;
+}
+
+.posts article h2 {
+    margin-top: 0;
+}
+
+/* Estilos específicos da barra lateral */
+.sidebar {
+    width: 30%;
+    float: left;
+    padding: 20px;
+}
+
+/* Estilos específicos do rodapé */
+footer {
+    clear: both;
+    text-align: center;
+    background-color: #ddd;
+    padding: 20px;
+}

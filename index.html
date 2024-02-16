@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="blog-header">
+            <h1>Meu Blog</h1>
+            <img src="bloguer.jpg" alt="Foto do Blogueiro">
+            <!-- Barra de pesquisa -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar...">
+                <button type="button" onclick="searchPosts()">Buscar</button>
+            </div>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="banner.jpg" alt="Banner Publicitário">
+    </div>
+    <main>
+        <section class="posts">
+            <!-- Postagem 1 -->
+            <article>
+                <h2>Postagem 1</h2>
+                <img src="postagem1.jpg" alt="Postagem 1">
+                <p>Conteúdo da postagem 1...</p>
+            </article>
+            <!-- Postagem 2 -->
+            <article>
+                <h2>Postagem 2</h2>
+                <img src="postagem2.jpg" alt="Postagem 2">
+                <p>Conteúdo da postagem 2...</p>
+            </article>
+        </section>
+        <aside class="sidebar">
+            <section>
+                <h2>Perfil do Blogueiro</h2>
+                <img src="bloguer.jpg" alt="Foto do Blogueiro">
+                <p>Breve biografia do blogueiro...</p>
+            </section>
+            <section>
+                <h2>Anúncio</h2>
+                <img src="anuncio.jpg" alt="Anúncio">
+            </section>
+        </aside>
+    </main>
+    <footer>
+        <p>Direitos Autorais &copy; 2024 Meu Blog</p>
+    </footer>
+
+    <script>
+        function searchPosts() {
+            var input, filter, articles, article, h2, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            articles = document.getElementsByTagName("article");
+            for (i = 0; i < articles.length; i++) {
+                article = articles[i];
+                h2 = article.getElementsByTagName("h2")[0];
+                txtValue = h2.textContent || h2.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    article.style.display = "";
+                } else {
+                    article.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
